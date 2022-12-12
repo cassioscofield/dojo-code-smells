@@ -4,7 +4,7 @@
 
 ## Exercício 1
 
-- O código deve retornar a soma dos validores do CSV inputado, quando cada valor inputado for entre dois números inteiros (0 e 1000), se o valor inputado for fora desse intervalo, o valor deve ser ignorado e não somado. Se um número de entrada for negativo, deve retornar um erro.
+- O código deve retornar a soma dos valores de uma lista separada por vírgula quando cada valor inputado for entre dois números inteiros (0 e 1000), se o valor inputado for fora desse intervalo, o valor deve ser ignorado e não somado. Se um número de entrada for negativo, deve retornar um erro.
 
 ### Casos de teste: 
 1. se for inputado `''`, o retorno deve ser 0
