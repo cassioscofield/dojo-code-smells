@@ -1,20 +1,20 @@
 function add(numbers) {
-    var result = 0;
+    var s = 0;
     var parts = numbers.split(',');
     for (var i = 0; i < parts.length; i++) {
-        var integer = parseInt(parts[i]);
-        if (integer < 0) {
+        var n = parseInt(parts[i]);
+        if (n < 0) {
             return -1;
         }
-        if (!isNaN(integer)) {
-            if (integer >= 0) {
-                if (integer <= 1000) {
-                    result += integer;
+        if (!isNaN(n)) {
+            if (n >= 0) {
+                if (n <= 1000) {
+                    s += n;
                 }
             }
         }
     }
-    return result;
+    return s;
 }
 
 module.exports = add;
