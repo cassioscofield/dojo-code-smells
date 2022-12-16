@@ -66,3 +66,46 @@ input = {
 result = getStatusAssinatura(input);
 console.log({input, result});
 assert(result, 'INEXISTENTE');
+
+input = {
+    assinatura: {}
+};
+result = getStatusAssinatura(input);
+console.log({ input, result });
+assert(result, 'INEXISTENTE');
+
+input = {
+    id: 'F',
+    assinatura: {
+        id: 5,
+        ativa: true,
+        reembolsada: true,
+        expirada: false,
+    }
+};
+result = getStatusAssinatura(input);
+console.log({ input, result });
+assert(result, 'REEMBOLSADA');
+
+input = {
+    id: 'G',
+    assinatura: {
+        id: 6,
+        ativa: false,
+        reembolsada: true,
+        expirada: true,
+    }
+};
+result = getStatusAssinatura(input);
+console.log({ input, result });
+assert(result, 'REEMBOLSADA');
+
+input = {
+    id: 'H',
+    assinatura: {
+        id: 7,
+    }
+};
+result = getStatusAssinatura(input);
+console.log({ input, result });
+assert(result, 'INATIVA');
