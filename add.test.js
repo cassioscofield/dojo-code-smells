@@ -25,3 +25,23 @@ input = '1,1001,3,4';
 result = add(input);
 console.log({input, result});
 assert(result, 8);
+
+input = '-5'
+result = add(input)
+console.log({input, result})
+assert(result, -1)
+
+input = '-5, 6'
+result = add(input)
+console.log({input, result})
+assert(result, -1)
+
+input = '5, -6';
+result = add(input);
+console.log({input, result});
+assert(result, -1);
+
+input = '5,A'
+result = add(input);
+console.log({input, result});
+assert(result, 5);

@@ -1,20 +1,32 @@
-function add(numbers) {
-    var s = 0;
-    var parts = numbers.split(',');
-    for (var i = 0; i < parts.length; i++) {
-        var n = parseInt(parts[i]);
-        if (n < 0) {
+function add(listaDeNumeros) {
+    var total = 0;
+    var listaDeNumerosInteiros = listaDeNumeros.split(',');
+    for (var i = 0; i < listaDeNumerosInteiros.length; i++) {
+        var numeroAtual = +listaDeNumerosInteiros[i];
+        if (numeroAtual < 0) {
             return -1;
         }
-        if (!isNaN(n)) {
-            if (n >= 0) {
-                if (n <= 1000) {
-                    s += n;
-                }
-            }
+        if (isNaN(numeroAtual)) {
+            continue;
+        }
+        if (isIntervaloPermitido(numeroAtual)) {
+            total += numeroAtual;
         }
     }
-    return s;
+    return total;
 }
 
+function isIntervaloPermitido(numeroAtual) {
+
+    var valorMaximo = 1000;
+    var valorMinimo = 0;
+
+    return numeroAtual >= valorMinimo && numeroAtual <= valorMaximo;
+}
+
+
+// Code-smells
+// nome das variávies pouco legível
+// magic number
+// cadeia de if
 module.exports = add;
